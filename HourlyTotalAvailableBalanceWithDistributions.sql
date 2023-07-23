@@ -34,7 +34,6 @@ DECLARE  @StartDate			 AS DATETIME = DATEADD(DAY,-1,cast(@StartDateParameter as 
 			;
 DELETE FROM #TempDateHours WHERE @BaseDay   < HourlyDateTime
 DELETE FROM #TempDateHours WHERE @StartDate > HourlyDateTime;
-;
 WITH DailyLastBalanceOfUserUpdating AS
 	(
 	SELECT
